@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDDE8577-4C68-4205-8172-0737BEBA2602}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Invoicing.Sell</RootNamespace>
+    <AssemblyName>Invoicing.Sell</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGoods.Designer.cs">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sell.cs" />
+    <Compile Include="SellGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellGoods.Designer.cs">
+      <DependentUpon>SellGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLatelySell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLatelySell.Designer.cs">
+      <DependentUpon>ucLatelySell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSell.Designer.cs">
+      <DependentUpon>ucSell.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Invoicing.Common\Invoicing.Common.csproj">
+      <Project>{E79195FA-EF90-4513-9F5B-28293940942B}</Project>
+      <Name>Invoicing.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmGoods.resx">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellGoods.resx">
+      <DependentUpon>SellGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLatelySell.resx">
+      <DependentUpon>ucLatelySell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSell.resx">
+      <DependentUpon>ucSell.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
